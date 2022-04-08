@@ -1,15 +1,16 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-      <div class="q-pa-md">
+      <!-- <div class="q-pa-md">
     <div class="q-gutter-y-md" style="width: 100%">
       <q-card>
         <q-tabs
           v-model="tab"
-          class="text-grey"
-          active-color="brown-9"
-          indicator-color="brown-9 width:100%"
-          narrow-indicator
+          class="text-grey-4"
+          active-color="white"
+          indicator-color="lime-10"
+          align="justify"
         >
+
           <q-tab class="tab" name="mails" label="Mails" />
           <q-tab class="tab" name="alarms" label="Alarms" />
 
@@ -17,7 +18,10 @@
 
         <q-separator />
 
-        <q-tab-panels v-model="tab" animated>
+        <q-tab-panels v-model="tab" animated
+         transition-prev="fade"
+         transition-next="fade"
+        >
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -30,7 +34,11 @@
         </q-tab-panels>
       </q-card>
     </div>
-      </div>
+      </div> -->
+
+
+
+      <Sample />
 
 
     <!-- <q-drawer
@@ -51,8 +59,12 @@
 
 <script>
   import { ref } from 'vue'
+  import Sample from 'components/sample.vue'
 
 export default {
+  components:{
+    Sample
+  },
   setup () {
     return {
       tab: ref('mails')
@@ -63,10 +75,12 @@ export default {
 
 
 <style lang="scss">
-   .tab-design {
-     color: red;
-   }
+
    .tab {
-     background-color: black;
+      background-color: #71bf8d;
+     width:100%;
+   }
+   .indicate {
+     width:100%;
    }
 </style>
