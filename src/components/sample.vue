@@ -6,11 +6,10 @@
         <q-card flat class="" >
           <q-tabs
             v-model="label"
-            class=" text-secondary bg-indigo-5 q-pa-none text-white "
+            class=" text-secondary bg-cyan-2 q-pa-none text-white "
             align="justify"
             indicator-color="black"
             v-ripple="false"
-            style=""
           >
             <div class="col-6">
               <q-tab name="inbox"  @click="selected = 1"  :ripple="false"  class="q-mx-auto q-px-none q-py-md" style="width:100%; " > <p  :class="{highlight:selected == 1}" style="border-radius: 15px" class="hello q-px-xl q-py-sm q-my-auto " >Active</p> </q-tab>

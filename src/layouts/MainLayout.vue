@@ -1,17 +1,20 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-      <!-- <div class="q-pa-md">
-    <div class="q-gutter-y-md" style="width: 100%">
+      <div class="">
+    <div class="q-gutter-y-md" style="width:100%">
       <q-card>
         <q-tabs
           v-model="tab"
-          class="text-grey-4"
+          class="text-grey-4-bold"
           active-color="white"
           indicator-color="lime-10"
           align="justify"
+          style="height: 80px; font-size: 50rem;"
+
         >
 
-          <q-tab class="tab" name="mails" label="Mails" />
+
+          <q-tab class="tab" style="" name="mails" label="Mails"/>
           <q-tab class="tab" name="alarms" label="Alarms" />
 
         </q-tabs>
@@ -34,11 +37,11 @@
         </q-tab-panels>
       </q-card>
     </div>
-      </div> -->
+      </div>
 
 
 
-      <Sample />
+      <!-- <Sample /> -->
 
 
     <!-- <q-drawer
@@ -79,6 +82,7 @@ export default {
    .tab {
       background-color: #71bf8d;
      width:100%;
+
    }
    .indicate {
      width:100%;
