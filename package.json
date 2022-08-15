@@ -1,37 +1,46 @@
 {
-  "name": "callapp",
-  "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "callapp",
-  "author": "Glory Theophilus",
-  "private": true,
+  "name": "pineapple",
+  "version": "1.0.0",
+  "description": "Text, Voice and Video chat API with Socket.io and WebRTC",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "jest",
+    "dev": "cross-env NODE_ENV=development nodemon -r tsconfig-paths/register src/index.ts",
+    "start": "cross-env NODE_ENV=production nodemon dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatiudeen/pineapple.git"
+  },
+  "keywords": [],
+  "author": "Shehu-Fatiudeen Lawal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatiudeen/pineapple/issues"
+  },
+  "homepage": "https://github.com/fatiudeen/pineapple#readme",
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "core-js": "^3.6.5",
-    "quasar": "^2.0.0",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "pm2": "^5.2.0",
+    "socket.io": "^4.5.1",
+    "ts-node": "^10.8.0",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
-    "@quasar/app": "^3.0.0"
-  },
-  "browserslist": [
-    "last 10 Chrome versions",
-    "last 10 Firefox versions",
-    "last 4 Edge versions",
-    "last 7 Safari versions",
-    "last 8 Android versions",
-    "last 8 ChromeAndroid versions",
-    "last 8 FirefoxAndroid versions",
-    "last 10 iOS versions",
-    "last 5 Opera versions"
-  ],
-  "engines": {
-    "node": ">= 12.22.1",
-    "npm": ">= 6.13.4",
-    "yarn": ">= 1.21.1"
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^3.4.1",
+    "jest": "^28.1.3",
+    "supertest": "^6.2.4",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.7.2"
   }
 }
